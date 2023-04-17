@@ -6,7 +6,7 @@ insurance_rate_employer = 0.3
 income=10000000
 tax_boundaries=[10000000,14000000,23000000,34000000]
 tax_percent=[0.10,0.15,0.20,0.30]
-
+tax = 0
 if sys.argv.__len__() > 1:
     if sys.argv[1].__contains__("-h") or sys.argv[1].__contains__("--help"):
         print("You need to provide input argument as bellow \n \
