@@ -1,6 +1,8 @@
 import sys
 import ast
 
+insurance_rate_employee = 0.07
+insurance_rate_employer = 0.3
 income=10000000
 tax_boundaries=[10000000,14000000,23000000,34000000]
 tax_percent=[0.10,0.15,0.20,0.30]
@@ -35,4 +37,7 @@ for index in range(3,0,-1):
         tax= re*tax_percent[index]+sum(fulltaxed[0:index+1])
         break
 
-print("You should pay {:.2f} tax for {} income! the net income is {:.2f}".format(tax,income,income-tax))
+income_insurance_rate_employee = income * insurance_rate_employee
+income_insurance_rate_employer = income * insurance_rate_employer
+
+print("You should pay {:.2f} tax for {} income! the insurance tax is {:.2f} that you should pay {:.2f} of it, so sum of deduction on your income is {:.2f} and the net income is {:.2f}".format(tax,income,income_insurance_rate_employer,income_insurance_rate_employee,tax+income_insurance_rate_employee,income-tax-income_insurance_rate_employee))
