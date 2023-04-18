@@ -4,7 +4,6 @@ import ast
 insurance_rate_employee = 0.07
 insurance_rate_employer = 0.23
 income=18000000
-taxeable_income=income
 tax_boundaries=[10000000,14000000,23000000,34000000]
 tax_percent=[0.10,0.15,0.20,0.30]
 tax = 0
@@ -23,11 +22,12 @@ if sys.argv.__len__() > 1:
         print("You need to provide your income (mountly), this is the mandatory argumant")
         exit(1)
     if sys.argv.__len__() > 2 and sys.argv[2] is not None:
-        tax_boundaries = ast.literal_eval(sys.argv[2])
+        taxeable_income = ast.literal_eval(sys.argv[2])
     if sys.argv.__len__() > 3 and sys.argv[3] is not None:
-        tax_percent = ast.literal_eval(sys.argv[3])
+        tax_boundaries = ast.literal_eval(sys.argv[3])
     if sys.argv.__len__() > 4 and sys.argv[4] is not None:
-        house_right = ast.literal_eval(sys.argv[4])
+        tax_percent = ast.literal_eval(sys.argv[4])
+    
 else:
     print("You need to provide input argument, type -h or --help for help")
     exit(1)
