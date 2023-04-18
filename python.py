@@ -2,7 +2,7 @@ import sys
 import ast
 
 insurance_rate_employee = 0.07
-insurance_rate_employer = 0.3
+insurance_rate_employer = 0.27
 income=10000000
 tax_boundaries=[10000000,14000000,23000000,34000000]
 tax_percent=[0.10,0.15,0.20,0.30]
