@@ -40,4 +40,4 @@ for index in range(3,0,-1):
 income_insurance_rate_employee = income * insurance_rate_employee
 income_insurance_rate_employer = income * insurance_rate_employer
 
-print("You should pay {:.2f} tax for {} income! the insurance tax is {:.2f} that you should pay {:.2f} of it, so sum of deduction on your income is {:.2f} and the net income is {:.2f}".format(tax,income,income_insurance_rate_employer,income_insurance_rate_employee,tax+income_insurance_rate_employee,income-tax-income_insurance_rate_employee))
+print(f'You should pay {tax:.2f} tax for {income} income! the insurance tax is {income_insurance_rate_employer:.2f} that you should pay {income_insurance_rate_employee:.2f} of it, so sum of deduction on your income is {tax+income_insurance_rate_employee:.2f} and the net income is {income-tax-income_insurance_rate_employee:.2f}')
