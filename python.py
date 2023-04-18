@@ -5,10 +5,6 @@ insurance_rate_employee = 0.07
 insurance_rate_employer = 0.23
 income=18000000
 taxeable_income=income
-# base_wage_daily=income/30
-# house_right=900000
-# worker_coupon=2000000
-# base_part_income=[base_wage_daily*day+(house_right+worker_coupon) for day in [31,30] ]
 tax_boundaries=[10000000,14000000,23000000,34000000]
 tax_percent=[0.10,0.15,0.20,0.30]
 tax = 0
@@ -53,7 +49,3 @@ print(f'You should pay {tax:.2f} tax for {income} income! the insurance tax is {
 print(f'You should pay {income_insurance_rate_employee:.2f} and your company pays {income_insurance_rate_employer:.2f} of insurance tax.')
 print(f'Sum of deduction on your income is {tax+income_insurance_rate_employee:.2f}.')
 print(f'The net income is {net_income:.2f}.')
-# print(f'You should pay {tax:.2f} tax for {income} income! the insurance tax is {income_insurance_rate_employer[0]:.2f} for 31-day and {income_insurance_rate_employer[1]:.2f} for 30-day mounts of year')
-# print(f'You should pay {income_insurance_rate_employee[0]:.2f} for 31-day and {income_insurance_rate_employee[1]:.2f} for 30-day mounts of year of insurance tax.')
-# print(f'Sum of deduction on your income is {tax+income_insurance_rate_employee[0]:.2f} for 31-day and and {tax+income_insurance_rate_employee[1]:.2f} for 30-day mounts.')
-# print(f'The net income for 31-day mounts is {net_income[0]:.2f} and is {net_income[1]:.2f} for 30-day mounts')
