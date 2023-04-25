@@ -23,7 +23,7 @@ def calculate_insurance(insurance_rate_employee,insurance_rate_employer,exemptio
         income_insurance_rate_employer = insurance_rate_employer * taxeable_income
     return [round(income_insurance_rate_employee,2),round(income_insurance_rate_employer,2)]
 
-def check_arguments():
+def check_arguments(): # pragma: no cover
     if sys.argv.__len__() > 1:
         if sys.argv[1].__contains__("-h") or sys.argv[1].__contains__("--help"):
             print("You need to provide input argument as bellow \n \
@@ -37,7 +37,7 @@ def check_arguments():
         print("You need to provide input argument, type -h or --help for help")
         exit(1)
 
-def main():
+def main(): # pragma: no cover
     insurance_rate_employee = 0.07
     insurance_rate_employer = 0.23
     income=18000000
@@ -72,5 +72,5 @@ def main():
     print(f'The net income is {net_income:.2f}.')
 
 if __name__ == "__main__":
-    main()
+    main() # pragma: no cover
 
