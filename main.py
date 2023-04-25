@@ -66,7 +66,7 @@ def main(): # pragma: no cover
     tax = calculate_tax(tax_boundaries,tax_percent, income)
     net_income = income-tax-income_insurance_rate_employee
 
-    print(f'You should pay {tax:.2f} tax for {income} income! the insurance tax is {income_insurance_rate_employee+income_insurance_rate_employer:.2f}, there is a subtle difference for 31-day and 30-day mounts.')
+    print(f'You should pay {tax:.2f} in tax for {income} income! the insurance tax is {income_insurance_rate_employee+income_insurance_rate_employer:.2f}, there is a subtle differences for 31-day and 30-day mounts.')
     print(f'You should pay {income_insurance_rate_employee:.2f} and your company pays {income_insurance_rate_employer:.2f} of insurance tax.')
     print(f'Sum of deduction on your income is {tax+income_insurance_rate_employee:.2f}.')
     print(f'The net income is {net_income:.2f}.')
