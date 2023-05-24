@@ -37,6 +37,10 @@ def check_arguments(): # pragma: no cover
         print("You need to provide input argument, type -h or --help for help")
         exit(1)
 
+def without_test():
+    return "Hi there"
+
+
 def main(): # pragma: no cover
     insurance_rate_employee = 0.07
     insurance_rate_employer = 0.23
@@ -70,6 +74,8 @@ def main(): # pragma: no cover
     print(f'You should pay {income_insurance_rate_employee:.2f} and your company pays {income_insurance_rate_employer:.2f} of insurance tax.')
     print(f'Sum of deduction on your income is {tax+income_insurance_rate_employee:.2f}.')
     print(f'The net income is {net_income:.2f}.')
+
+    without_test()
 
 if __name__ == "__main__":
     main() # pragma: no cover
